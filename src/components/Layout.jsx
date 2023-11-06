@@ -1,13 +1,12 @@
 import React from 'react';
+import styles from "./Layout.module.css";
 
 const Layout = ({children}) => {
     return (
-        <div>
+        <div className={styles.container}>
             <h1>Book Library</h1>
                 {children}
-            <div>
-                <span>Developed by Ehsan</span>
-            </div>
+            <h4>Developed by Ehsan</h4>
         </div>
     );
 };

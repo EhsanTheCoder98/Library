@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+}
+.booksContainer {
+    flex: 3;
+}
+.favorites {
+    flex: 1;
+    background-color: silver;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin: 30px 15px;
+}
+.favorites div {
+    background-color: aqua;
+    display: flex;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+}
+.favorites div img {
+    width: 50px;
+    padding-right: 30px;
+}

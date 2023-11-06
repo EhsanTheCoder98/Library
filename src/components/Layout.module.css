@@ -1,0 +1,23 @@
+.container {
+    background-color: black;
+}
+
+.container h1,h4 {
+    text-align: center;
+    margin: 20px auto;
+    padding: 5px 30px;
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: silver;
+    width: fit-content;
+}
+
+.container input {
+    margin: 0 auto;
+    display: block;
+    border:none;
+    padding: 3px 10px;
+    text-align: center;
+    outline: none;
+    border-radius: 10px;
+}

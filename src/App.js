@@ -1,14 +1,14 @@
 import React from "react";
 
 // components
-import Library from "./components/Library";
 import Layout from "./components/Layout";
+import Book from "./components/Book";
 
 const App = () => {
   return (
     <div>
       <Layout>
-        <Library />
+        <Book />
       </Layout>
     </div>
   );
