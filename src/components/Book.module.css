@@ -6,14 +6,15 @@
 }
 .favorites {
     flex: 1;
-    background-color: silver;
+    background-color: rgba(255, 0, 255, 0.747);
     border-radius: 10px;
     padding: 10px;
     text-align: center;
     margin: 30px 15px;
+    height: fit-content;
 }
 .favorites div {
-    background-color: aqua;
+    background-color: rgba(0, 255, 255, 0.697);
     display: flex;
     margin: 10px;
     padding: 20px;
