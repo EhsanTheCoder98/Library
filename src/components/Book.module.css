@@ -24,3 +24,29 @@
     width: 50px;
     padding-right: 30px;
 }
+.search {
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+}
+.search button {
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    background:none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    scale: 1.4;
+    transition: all .1s ease;
+}
+.search button:hover{
+    scale: 1.7;
+}
+.search input {
+    outline: none;
+    border:none;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}

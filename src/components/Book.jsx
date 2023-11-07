@@ -1,9 +1,19 @@
 import React, { useState } from "react";
-import { books } from "../constants/mockData";
+import { books as allBooks } from "../constants/mockData";
 import Library from "./Library";
 import styles from "./Book.module.css";
+import { FaBook } from "react-icons/fa"
 
 const Book = () => {
+  const [books,setBooks] = useState(allBooks);
+  const bookSearchHandler = () => {
+    if(search){
+      const newBooks = allBooks.filter(book=>book.title.toLowerCase().includes(search));
+      setBooks(newBooks);
+    }else{
+      setBooks(allBooks);
+    }
+  }
   const [search, setSearch] = useState("");
   const searchHandler = (event) => {
     setSearch(event.target.value.toLowerCase());
@@ -17,15 +27,19 @@ const Book = () => {
       setLiked([...liked, book]);
     }
   };
-  const searchedBook = search.includes(books)
   return (
     <>
+      <div className={styles.search}>
       <input
         type="text"
         value={search}
         onChange={searchHandler}
         placeholder="Search the book you want"
       />
+      <button onClick={bookSearchHandler} >
+        <FaBook />
+      </button>
+      </div>
       <div className={styles.container}>
         <div className={styles.booksContainer}>
           {books.map((item) => (
