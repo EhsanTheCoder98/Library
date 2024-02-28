@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect } from "react";
 import styles from "./Library.module.css";
 import { AiFillHeart} from "react-icons/ai";
 
 const Library = ({books,statusHandler}) => {
   const [click, setClick] = useState(false);
+  useEffect(() => {
+    const likeStatus = JSON.parse(localStorage.getItem(`liked_${books.id}`));
+    if (likeStatus !== null) {
+      setClick(likeStatus);
+    }
+  }, [books.id]);
   const clickHandler = () => {
-    setClick((click) => !click);
-    statusHandler(click,books);
+    const newClick = !click;
+    setClick(newClick);
+    localStorage.setItem(`liked_${books.id}`, JSON.stringify(newClick));
+    statusHandler(newClick, books);
   };
   return (
     <div>
